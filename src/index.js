@@ -9,6 +9,7 @@ class App extends React.Component {
     this.state = { lat: null, errorMessage: '' };
   }
 
+  //lifecycle method, this is where one time data loading should always be done, not at constructor.
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
       position => this.setState({ lat: position.coords.latitude }),
