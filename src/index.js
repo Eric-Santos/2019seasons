@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// state can be initialized without constructor
+// state can be initialized without constructor, Babel will add constructor and super automatically
 class App extends React.Component {
   state = { lat: null, errorMessage: '' };
   //lifecycle method, this is where one time data loading should always be done, not at constructor.
