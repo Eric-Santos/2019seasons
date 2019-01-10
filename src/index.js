@@ -1,14 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//class component needs constructor with props that will update at component level,super needed to use React.Component original parent constructor, initialize state with this.state{property: null"for use with unknown numbers"}
+// state can be initialized without constructor
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    //this is the only time we do direct assignment!!
-    this.state = { lat: null, errorMessage: '' };
-  }
-
+  state = { lat: null, errorMessage: '' };
   //lifecycle method, this is where one time data loading should always be done, not at constructor.
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
