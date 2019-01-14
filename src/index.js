@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
 
 // state can be initialized without constructor, Babel will add constructor and super automatically
 class App extends React.Component {
@@ -18,7 +19,7 @@ class App extends React.Component {
     }
 
     if (!this.state.errorMessage && this.state.lat) {
-      return <div>Latitude: {this.state.lat}</div>;
+      return <SeasonDisplay lat={this.state.lat} />;
     }
     return <div>Loading!</div>;
   }
